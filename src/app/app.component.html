@@ -1,0 +1,13 @@
+<h1>TO DO LIST</h1>
+<ul>
+  <li class="task" *ngFor="let task of characters">
+    <a class="ctrl" (click)="remove(task)">x</a>
+    <article>    {{ task }}    </article> <br>
+  </li>
+</ul>
+
+
+<form class="add-new" (submit)="addTask($event)" >
+  <input type="text" [value]="newToDo" (input)="newToDo = $event.target.value" /> 
+</form>
+
